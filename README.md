@@ -1,19 +1,59 @@
-# Atividade 03 – 1º Bimestre  
-## Sistema de Vendas Avançado com JUnit e Mockito
+# Atividades
 
+# 📝 Atividade 02 – 1º Bimestre
+
+## Sistema de Testes Unitários com Mocks
+
+Esta atividade foca na **criação de testes unitários utilizando mocks**, simulando o comportamento de serviços e dependências para garantir que a lógica de negócio funcione corretamente sem depender de implementações reais.
+
+## Objetivo
+
+Desenvolver **testes unitários** para diversas classes do sistema, garantindo **isolamento de dependências**, **validação de regras de negócio** e **uso correto de mocks**.
+
+## Exercícios
+
+### 1 – Autenticação de Usuário
+
+**Testes Unitários:**
+- Validar login com sucesso (usuário existe e senha correta).  
+- Validar login falho (usuário não existe).  
+- Validar senha incorreta.
+
+### 2 – Carrinho de Compras
+
+**Testes Unitários:**
+- Testar que um produto pode ser adicionado se tiver estoque suficiente.  
+- Testar que não é adicionado quando o estoque é insuficiente.  
+- Verificar que `atualizarEstoque()` é chamado corretamente.
+
+### 3 – Envio de E-mail
+
+**Testes Unitários:**
+- Validar que ao chamar `notificarUsuario()`, o método `enviarEmail()` seja chamado com os parâmetros corretos.
+
+### 4 – Processamento de Pagamento
+
+**Testes Unitários:**
+- Validar pagamento com sucesso.  
+- Validar pagamento falho.  
+- Validar exceção quando o valor é menor ou igual a 0.
+
+### 5 – Calculadora de Desconto
+
+**Testes Unitários:**
+- Validar desconto de 20% para cliente VIP.  
+- Validar que clientes comuns não têm desconto.
+  
+# 📝 Atividade 03 – 1º Bimestre  
+Sistema de Vendas Avançado com JUnit e Mockito
 Este projeto implementa um sistema de vendas que simula o fluxo de um **e-commerce**, incluindo carrinho de compras, descontos, estoque, pagamento e emissão de nota fiscal.  
-
 Também foram implementados **testes unitários com JUnit e Mockito**, cobrindo os principais cenários de negócio.
 
----
 
-## 🎯 Objetivo
+## Objetivo
 Desenvolver um sistema modular com foco em **testabilidade** e **boas práticas de programação orientada a objetos**.  
 
----
-
-## 📦 Estrutura do Projeto
-
+## Estrutura do Projeto
 ### Classes e Interfaces
 1. **Produto**
    - Atributos: `id`, `nome`, `preco`, `estoque`.
@@ -50,9 +90,7 @@ Desenvolver um sistema modular com foco em **testabilidade** e **boas práticas 
        - Se aprovado: reduz estoque, emite nota fiscal e retorna `true`.  
        - Caso contrário, retorna `false`.  
 
----
-
-## 🧪 Testes Implementados
+## Testes Implementados
 
 ### Parte 1 – Carrinho
 - Adição de produtos no carrinho (incluindo quantidades).  
@@ -89,11 +127,3 @@ Desenvolver um sistema modular com foco em **testabilidade** e **boas práticas 
 - **JUnit 5**  
 - **Mockito**  
 - **Maven/Gradle** (dependendo do seu build)  
-
----
-
-## ▶️ Como Executar
-1. Clone o repositório:  
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repo.git
-   cd seu-repo
